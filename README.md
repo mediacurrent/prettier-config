@@ -1,6 +1,12 @@
 # prettier-config
 Make sure all of your code is run through Prettier when you commit it to git. We achieve this by configuring prettier to run on git hooks using husky and lint-staged.
 
+- [Install](#install)
+- [Extend](#extend)
+- [Ignore File](#ignore-file)
+- [Pre-commit hook](#pre-commit-hook)
+- [IDE Configuration](#ide-configuration)
+
 ## Install
 
 `npm install --save-dev prettier @mediacurrent/prettier-config`

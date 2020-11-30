@@ -1,0 +1,15 @@
+{
+  "name": "@mediacurrent/prettier-config",
+  "version": "0.0.1",
+  "main": "index.js",
+  "keywords": [
+    "mediacurrent",
+    "prettier",
+    "prettier-config"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mediacurrent/prettier-config"
+  },
+  "homepage": "https://github.com/mediacurrent/prettier-config"
+}

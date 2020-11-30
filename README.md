@@ -3,7 +3,7 @@ Make sure all of your code is run through Prettier when you commit it to git. We
 
 ## Install
 
-`npm install --save-dev @mediacurrent/prettier-config`
+`npm install --save-dev prettier @mediacurrent/prettier-config`
 
 ## Extend
 Can be extended two ways:
@@ -28,3 +28,28 @@ module.exports = {
 
 ## Ignore File
 Unfortunately, Prettier does not have a way to extend a shared `.prettierignore` file so the one in this repo must be copied and pasted in to a new `.prettierignore` file at the root of your project.
+
+## Pre-commit Hook
+To have prettier format all files before commit (to prevent unformatted files from being committed), follow these steps.
+
+### Install packages
+
+`npm install --save-dev husky lint-staged`
+
+### Add hooks to `package.json`
+This will affect `.js`, `.md`, `.mdx`, `.json`, and `.scss` files.  For this to work properly, [eslint](https://github.com/mediacurrent/eslint-config) and [sass-lint](https://github.com/mediacurrent/sass-lint-config) need to have been configured properly.
+
+```json
+{
+  // Rest of file
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,md,mdx,json}": "['prettier --write']",
+    "*.scss": "npm run lint:sass",
+  }
+}
+```

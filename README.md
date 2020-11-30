@@ -1,4 +1,4 @@
-# prettier-config
+# @mediacurrent/prettier-config
 Make sure all of your code is run through Prettier when you commit it to git. We achieve this by configuring prettier to run on git hooks using husky and lint-staged.
 
 - [Install](#install)

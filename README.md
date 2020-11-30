@@ -39,9 +39,10 @@ To have prettier format all files before commit (to prevent unformatted files fr
 ### Add hooks to `package.json`
 This will affect `.js`, `.md`, `.mdx`, `.json`, and `.scss` files.  For this to work properly, [eslint](https://github.com/mediacurrent/eslint-config) and [sass-lint](https://github.com/mediacurrent/sass-lint-config) need to have been configured properly.
 
+Add the following `husky` and `lint-staged` commands to your `package.json`.
+
 ```json
 {
-  // Rest of file
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"

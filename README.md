@@ -54,3 +54,11 @@ Add the following `husky` and `lint-staged` commands to your `package.json`.
   }
 }
 ```
+
+## IDE Configuration
+
+### VSCode
+
+A developer may or may not like having Prettier auto format when a file is saved.  The pre-commit hook will always format the file, so that choice can be controlled the following way in VSCode:
+
+`Settings -> Text Editor -> Formatting -> Format on Save`

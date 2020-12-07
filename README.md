@@ -60,6 +60,7 @@ Add the following `husky` and `lint-staged` commands to your `package.json`.
   }
 }
 ```
+The `npm run lint:sass` command is tied to the stylelint config and the jest test running suite.
 
 ## IDE Configuration
 
